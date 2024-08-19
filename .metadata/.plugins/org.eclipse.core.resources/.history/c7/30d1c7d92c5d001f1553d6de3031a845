@@ -1,0 +1,45 @@
+package Easy;
+
+import java.util.Scanner;
+
+public class TwoSum {
+	
+	public static int[] twoSum(int[] num, int target) {
+		
+		for(int i = 0; i < num.length; i++) {
+			for(int  j = i + 1; j < num.length; j++) {
+				if(num[i] + num[j] == target) {
+					int result[] = {i, j};
+					return result;
+				}
+			}
+		}
+		return null;
+	}
+	
+	public static void main(String[]args) {
+		
+		Scanner scn = new Scanner(System.in);
+		
+		System.out.println("Enter the number of elements in array");
+		int n = scn.nextInt();
+		
+		int num[] = new int[n];
+		System.out.println("Enter array elements");
+		for(int i = 0; i < n; i++) {
+			num[i] = scn.nextInt();
+		}
+		
+		System.out.println("Enter target value");
+		int target = scn.nextInt();
+		
+		System.out.println("Elements are");
+		for(int i = 0; i < n; i++) {
+			System.out.println(num[i]);
+		}
+		
+//		System.out.println(twoSum(num, target));
+		
+	}
+
+}
